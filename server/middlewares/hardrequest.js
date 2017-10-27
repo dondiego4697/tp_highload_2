@@ -1,5 +1,4 @@
 const log4js = require('log4js');
-const fs = require('fs');
 const imgGen = require('js-image-generator');
 
 log4js.configure({
