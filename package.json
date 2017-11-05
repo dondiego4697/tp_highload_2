@@ -13,6 +13,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "js-image-generator": "^1.0.2",
-    "log4js": "^2.3.10"
+    "log4js": "^2.3.10",
+    "lynx": "^0.2.0"
   }
 }
