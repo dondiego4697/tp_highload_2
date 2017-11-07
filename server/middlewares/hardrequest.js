@@ -14,9 +14,9 @@ module.exports = (req, res) => {
     /*const currDate = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()}#` +
         `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}.${date.getUTCMilliseconds()}`;*/
 
-    const width = Math.round(Math.random() * (1200 - 900) + 900);
-    const height = Math.round(Math.random() * (1200 - 900) + 900);
-    const quality = Math.round(Math.random() * (1200 - 900) + 900);
+    const width = Math.round(Math.random() * (1000 - 600) + 600);
+    const height = Math.round(Math.random() * (1000 - 600) + 600);
+    const quality = Math.round(Math.random() * (500 - 100) + 100);
     imgGen.generateImage(width, height, quality, (err, image) => {
         res
             .set('Content-Type', 'image/jpeg')
