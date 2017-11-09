@@ -24,6 +24,8 @@ const app = express()
         });
     });
 
-app.listen(PORT, () => {
-    console.log(`Server listen ${PORT} port`)
+const server = app.listen(PORT, () => {
+    console.log(`Server listen ${PORT} port`);
 });
+process.env.ADDRESSX = server.address().address.split('.').join('_');
+console.log(process.env.ADDRESSX);

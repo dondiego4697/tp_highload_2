@@ -16,7 +16,7 @@ module.exports = (req, res) => {
 
     const width = Math.round(Math.random() * (1000 - 600) + 600);
     const height = Math.round(Math.random() * (1000 - 600) + 600);
-    const quality = Math.round(Math.random() * (500 - 100) + 100);
+    const quality = Math.round(Math.random() * (100 - 10) + 10);
     imgGen.generateImage(width, height, quality, (err, image) => {
         res
             .set('Content-Type', 'image/jpeg')
