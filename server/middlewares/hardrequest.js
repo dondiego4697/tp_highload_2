@@ -11,8 +11,8 @@ const logger = log4js.getLogger('data');
 
 module.exports = (req, res) => {
     const date = new Date();
-    /*const currDate = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()}#` +
-        `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}.${date.getUTCMilliseconds()}`;*/
+    const currDate = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()}#` +
+        `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}.${date.getUTCMilliseconds()}`;
 
     const width = Math.round(Math.random() * (1000 - 600) + 600);
     const height = Math.round(Math.random() * (1000 - 600) + 600);
@@ -23,12 +23,10 @@ module.exports = (req, res) => {
             .status(200)
             .send(image.data);
 
-        sendMetrica(new Date() - date);
-
-        /*cpuLoader().then(res => {
+        cpuLoader().then(res => {
             const result = `${currDate}@${res.percent}@${new Date() - date}`;
-            sendMetrica(result);
+            sendMetrica(new Date() - date, res.percent);
             logger.info(result);
-        });*/
+        });
     });
 };
