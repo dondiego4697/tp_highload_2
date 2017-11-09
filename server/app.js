@@ -24,9 +24,7 @@ const app = express()
         });
     });
 
-const server = app.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server listen ${PORT} port`);
 });
-const int = require('os').networkInterfaces();
-process.env.ADDRESSX = int[Object.keys(int)[0]][0].address.split('.').join('_');
 console.log(process.env.ADDRESSX);
